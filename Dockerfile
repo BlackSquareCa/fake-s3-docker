@@ -8,4 +8,4 @@ RUN gem install fakes3
 ENV PORT 4569
 EXPOSE ${PORT}
 
-CMD ["fakes3", "-r", "/app/data", "-p", "${PORT}"]
+CMD fakes3 -r /app/data -p $PORT
