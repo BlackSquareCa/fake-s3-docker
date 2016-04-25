@@ -5,6 +5,7 @@ WORKDIR /app
 
 RUN gem install fakes3
 
-EXPOSE 4569
+ENV PORT 4569
+EXPOSE ${PORT}
 
-ENTRYPOINT ["fakes3", "-r" ,"/app/data", "-p", "4569"]
+CMD ["fakes3", "-r", "/app/data", "-p", "${PORT}"]
